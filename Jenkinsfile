@@ -5,10 +5,10 @@ pipeline {
         stage('Maven Test') {
             steps {
                 echo 'Testing for Maven Build...'
-				//sh "git submodule deinit --all -f"
-				//sh "git submodule init"
-				//sh "git submodule sync"
-				//sh "git submodule update"
+				sh "git submodule deinit --all -f"
+				sh "git submodule init"
+				sh "git submodule sync"
+				sh "git submodule update"
 				
 				sh "mvn test"
 				
